@@ -6,13 +6,13 @@
       <i slot="icon" class="icon-index"></i>
         首页
     </mt-tab-item>
-    <mt-tab-item id="分类页">
-      <i slot="icon" class="icon-category"></i>
-      分类
-    </mt-tab-item>
     <mt-tab-item id="发布页">
       <i slot="icon" class="icon-car"></i>
       发布
+    </mt-tab-item>
+    <mt-tab-item id="分类页">
+      <i slot="icon" class="icon-category"></i>
+      分类
     </mt-tab-item>
     <mt-tab-item id="用户页">
       <i slot="icon" class="icon-user"></i>
