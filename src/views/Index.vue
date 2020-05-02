@@ -4,10 +4,11 @@
     <v-header/>
     <v-swiper :swiperData="datas.swiper"/>
     <v-service/>
+    <v-search/>
     <v-section1 :list="datas.section1.list" :banner='datas.section1.banner'/>
-    <v-section2 :list="datas.section2.list" :banner='datas.section2.banner'/>
-    <v-section3/>
-    <v-section4 :list="datas.section4.list" :banner='datas.section4.banner'/>
+    <!-- <v-section2 :list="datas.section2.list" :banner='datas.section2.banner'/> -->
+    <!-- <v-section3/> -->
+    <!-- <v-section4 :list="datas.section4.list" :banner='datas.section4.banner'/> -->
     <v-baseline/>
     <v-footer/>
   </div>
@@ -15,6 +16,7 @@
 
 <script>
 import Header from '@/components/index/header.vue'
+import Search from '@/components/index/search.vue'
 import Swiper from '@/components/index/swiper.vue'
 import Service from '@/components/index/service.vue'
 import Section1 from '@/components/index/section1.vue'
@@ -27,6 +29,7 @@ import index from '@/http/mock.js' //模拟数据
 export default {
   components: {
     'v-header': Header,
+    'v-search': Search,
     'v-swiper': Swiper,
     'v-service': Service,
     'v-section1': Section1,
