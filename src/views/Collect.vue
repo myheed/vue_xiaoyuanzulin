@@ -3,7 +3,8 @@
 
   <div class="index">
     <vv-header class="header">
-      <h1 slot="title">收藏列表</h1>
+      <span slot='icon-go' class="icon-go" @click="$router.go(-1)"></span>
+      <h1 slot="title">租赁列表</h1>
     </vv-header>
     <v-section3 :list="datas.section3.list" :banner='datas.section3.banner'/>
     <v-baseline/>
