@@ -8,57 +8,29 @@
           <router-link :to="{name:'登录页'}">
             <span>退出登录</span>
           </router-link>
-
-
       </header>
       <div class="main">
-          <router-link class="my-indent" :to="{ name: '租赁列表'}">
-              <span class="my-indent-left">我的租赁</span>
-              <div class="my-indent-right">
-                  <span>全部租赁</span>
-                  <i class="icon-go"></i>
-              </div>
-          </router-link>
-
-<!--          <section class="my-pay">
+         <section class="my-pay">
               <router-link :to="{ name: ''}">
                   <span class="icon2-money"></span>
-                  <p>全部</p>
+                  <p>关注</p>
               </router-link>
               <router-link :to="{ name: '租赁列表'}">
                   <span class="icon2-money"></span>
-                  <p>待支付</p>
+                  <p>消息</p>
               </router-link>
-              <router-link :to="{ name: '租赁列表'}">
-                  <span class="icon2-money"></span>
-                  <p>未完成</p>
-              </router-link>
-              <router-link :to="{ name: '租赁列表'}">
-                  <span class="icon2-money"></span>
-                  <p>已完成</p>
-              </router-link>
-              <router-link :to="{ name: '租赁列表'}">
-                  <span class="icon2-thecar"></span>
-                  <p>已取消</p>
-              </router-link> -->
-<!--              <router-link :to="{ name: ''}">
-                  <span class="icon2-fixed"></span>
-                  <p>退换修  </p>
-              </router-link> -->
-
           </section>
 
           <section class="my-vip">
-        <!--    <router-link class="my-vip-top ho" :to="{ name: ''}" >
-              <div class="my-vip-top-div">
-                <span class="icon2-vip">
-                    <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span>
-                </span>
-              </div>
-              <p>
-                <span>我的租赁</span><i class="icon-go"></i>
-              </p>
-            </router-link> -->
+              <span class="my-indent">租入</span>
+            <router-link class="my-service-bottom" :to="{ name: '租赁列表'}">
+                 <div>
+                   <span class="icon2-settle"></span>
+                 </div>
+                 <p>
+                   <span>全部租赁</span><i class="icon-go"></i>
+                 </p>
+            </router-link>
             <router-link class="my-vip-bottom ho" :to="{ name: '收藏列表'}">
               <div>
                 <span class="icon2-money"></span>
@@ -71,38 +43,12 @@
 
               </p>
             </router-link>
-             <router-link class="my-service-bottom" :to="{ name: ''}">
-                 <div>
-                   <span class="icon2-settle"></span>
-                 </div>
-                 <p>
-                   <span>身份认证</span><i class="icon-go"></i>
-                 </p>
-             </router-link>
           </section>
 
-          <section class="my-service">
-        <!--      <router-link class="my-service-top" :to="{ name: ''}">
-                  <div>
-                    <span class="icon2-service">
-                        <span class="path1"></span><span class="path2"></span><span class="path3"></span>
-                    </span>
-                  </div>
-                  <p>
-                    <span>地址管理</span><i class="icon-go"></i>
-                  </p>
-              </router-link> -->
-<!--              <router-link class="my-service-bottom" :to="{ name: ''}">
-                  <div>
-                    <span class="icon2-settle"></span>
-                  </div>
-                  <p>
-                    <span>身份认证</span><i class="icon-go"></i>
-                  </p>
-              </router-link> -->
-          </section>
 
           <section class="my-settle">
+              <span class="my-indent">租出</span>
+
               <router-link :to="{ name: ''}" class="my-settle-top">
                   <div>
                     <span class="icon2-f"></span>
@@ -110,7 +56,7 @@
                   </div>
 
                   <p>
-                    <span>联系客服</span><i class="icon-go"></i>
+                    <span>我的发布</span><i class="icon-go"></i>
                   </p>
               </router-link>
               <router-link :to="{ name: ''}" class="my-settle-bottom">
@@ -118,7 +64,7 @@
                   <span class="icon2-settle"></span>
                 </div>
                 <p>
-                  <span>关于我们</span><i class="icon-go"></i>
+                  <span>我的租出</span><i class="icon-go"></i>
                 </p>
               </router-link>
           </section>
@@ -155,7 +101,8 @@
     .header {
       width: 100%;
       height: 16vw;
-      background: url(../../static/carbg.png) center 0 #f37d0f;
+      
+      // background: url(../../static/carbg.png) center 0 #f37d0f;
       background-size: auto 100%;
       padding: 3.2vw 0;
       display: -webkit-box;
@@ -240,6 +187,7 @@
           width: 33.33%;
           color: #999;
           text-align: center;
+          padding-left: 9vw;
 
           >span {
             .fz(font-size, 50);
