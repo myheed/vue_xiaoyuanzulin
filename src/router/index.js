@@ -15,6 +15,7 @@ const Login = resolve => require(['@/views/login.vue'], resolve)
 const OrderList = resolve => require(['@/views/OrderList.vue'], resolve)
 const Collect = resolve => require(['@/views/Collect.vue'], resolve)
 const Publish = resolve => require(['@/views/Publish.vue'], resolve)
+const Message = resolve => require(['@/views/Message.vue'], resolve)
 
 export default new Router({
   routes: [{
@@ -70,6 +71,10 @@ export default new Router({
       path: '/Publish',
       name: '发布页',
       component: Publish
+    },{
+      path: '/Message',
+      name: '消息页',
+      component: Message
     }
   ]
 })
