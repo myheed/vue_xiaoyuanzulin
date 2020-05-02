@@ -8,17 +8,17 @@ var index = Mock.mock('http://api.com/index', {
   // }],
   "swiper|4":[
     {
-      'imgPath':Random.image('800x400', '#04a1f7', '#FFF', 'png', ''),
+      'imgPath':Random.image('800x400', '#00FFF0', '#FFF', 'png', ''),
       'id':'@id'
     }
   ],
 
   'section1':{
     'list|4':[{
-      'imgPath':Random.image('400x400', '#b7ddf2', '#333', 'png', ''),
+      'imgPath':Random.image('400x400', '#00FF00', '#333', 'png', ''),
       'id':'@id'
     }],
-    'banner':Random.image('400x100', '#ffcc33', '#FFF', 'png', 's1-banner')
+    // 'banner':Random.image('400x100', '#ffcc33', '#FFF', 'png', 's1-banner')
   },
   'section2|10':{
     'list|10':[{
