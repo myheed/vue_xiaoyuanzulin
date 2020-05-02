@@ -8,7 +8,7 @@
        label="账号"
         placeholder="请输入账号"
         type = "text"
-        v-model = "account"
+        v-model = "phone"
         :readonly = '!toggle'
         :disableClear = '!toggle'
         v-if='toggle'></mt-field>
@@ -16,7 +16,7 @@
         label="账号"
          placeholder="******"
          type = "text"
-         v-model = "account"
+         v-model = "phone"
          :readonly = '!toggle'
          :disableClear = '!toggle'
          v-else='toggle'></mt-field>
@@ -61,7 +61,7 @@ export default {
   },
   data(){
     return {
-      account:'',
+      phone:'',
       password:'',
       toggle:!this.$store.state.login.token
     }
@@ -69,13 +69,14 @@ export default {
   methods:{
     // 登录按钮
     login(){
-      if(this.account!=="" && this.password!=="") {
-        Toast('登录成功,存储token,跳转网页');
+      if(this.phone!=="" && this.password!=="") {
+
+        Toast('登录成功');
         this.toggle = false;
         this.$store.commit('CHANGE_TOKEN',1);
-      }else {
+      }else{
         Toast('账号密码不能为空');
-      }
+      };
 
       setTimeout(()=>{
         this.$router.replace({
@@ -90,7 +91,7 @@ export default {
       Toast('退出登录成功,清除token');
       this.$store.commit('CHANGE_TOKEN',0);
       this.toggle = true;
-      this.account = '';
+      this.phone = '';
       this.password = '';
 
     }
