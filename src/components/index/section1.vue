@@ -1,19 +1,14 @@
 <template lang="html">
   <section class="section1">
-    <h1 class="section1-title">
-      section1
-      <i class="icon-right"></i>
-    </h1>
     <ul class="section1-list">
       <li v-for="k in list" :key="k.id">
-        <router-link :to="{name:'详情页'}">
+        <router-link :to="{name:'分类页', query: {category: k }}">
+         {{k.id}}
           <img v-lazy="k.imgPath" alt="">
         </router-link>
+
       </li>
     </ul>
-  <router-link :to="{ name: '详情页'}"  class="section1-banner">
-    <img v-lazy="banner">
-  </router-link>
   </section>
 </template>
 
@@ -22,10 +17,10 @@ import { Lazyload } from 'mint-ui';
 
 export default {
   props: {
-    banner: {
-      type: String,
-      default: ''
-    },
+    // banner: {
+    //   type: String,
+    //   default: ''
+    // },
     list: {
       type: Array,
       default: function () {
@@ -40,13 +35,14 @@ export default {
 <style lang="less" scoped>
 @import "../../assets/fz.less";
 @import "../../assets/index/style.css";
+
 .section1 {
   .pt();
   .section1-title {
     .bt();
     background-color: #ffffff;
     text-align: center;
-    padding: 4vw 0;
+    padding: 2vw 0;
     .fz(font-size, 40);
     color: #333;
     position: relative;
@@ -84,15 +80,6 @@ export default {
         width: 100%;
         display: block;
       }
-    }
-  }
-
-  .section1-banner {
-    display: block;
-    width: 100vw;
-    img {
-      width: 100%;
-      height: 24vw;
     }
   }
 }
